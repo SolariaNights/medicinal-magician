@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
@@ -18,9 +14,9 @@ function App() {
             <h2>Medical History</h2>
 
                 <div>
-                    <p>Previous conditions...</p>
-                    <p>Current medications...</p>
-                    <p>Allergies...</p>
+                    <p>Previous Conditions: None listed</p>
+                    <p>Current Medications: None listed</p>
+                    <p>Allergies: None listed</p>
                 </div>
 
             <h2>Current Symptoms</h2>
