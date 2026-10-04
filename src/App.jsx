@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+    const [assessmentStarted, setAssessmentStarted] = useState(false)
+
     return (
         <div>
             <h1>Welcome to the Medicinal Magician!</h1>
@@ -27,8 +30,15 @@ function App() {
 
       <br />
 
-      <button>Begin Assessment</button>
-        </div>
-    );
+      <button onClick={() => setAssessmentStarted(true)}>
+        Begin Assessment
+        </button>
+
+        {assessmentStarted && (
+    <p>Assessment started!</p>
+        )
 }
+   </div> 
+    );
+} 
 export default App;
