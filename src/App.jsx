@@ -39,12 +39,13 @@ function App() {
             </button>
 
             {assessmentStarted && (
-                <div>
-                    <p>Assessment started!</p>
-                    <p>Symptoms entered: {symptoms}</p>
-                </div>
-            )}
-        </div>
+            <div>
+            <h2>Assessment</h2>
+            <p>Symptoms entered: {symptoms}</p>
+            <p>Thank you. Your information has been recorded.</p>
+        </div>)
+}
+    </div>
     )
 }
 
