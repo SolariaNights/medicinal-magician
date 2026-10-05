@@ -4,6 +4,7 @@ import './App.css'
 function App() {
     const [assessmentStarted, setAssessmentStarted] = useState(false)
     const [symptoms, setSymptoms] = useState('')
+    const [patientName, setPatientName] = useState('')
 
     return (
         <div>
@@ -12,7 +13,11 @@ function App() {
             <h2>Patient Information: </h2>
 
             <div>
-                <p>Patient: Your Mom</p>
+                <input
+                placeholder="Enter Patient Name"
+                value={patientName}
+                onChange={(event) => setPatientName(event.target.value)}
+                />
                 <p>Date of Birth: 06/09/1969</p>
             </div>
 
