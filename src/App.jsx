@@ -69,6 +69,7 @@ function App() {
             <div>
             <h2>Assessment</h2>
             <p>Symptoms entered: {symptoms}</p>
+            <p>Severity: {severity}</p>
             <p>Thank you. Your information has been recorded.</p>
         </div>)
 }
