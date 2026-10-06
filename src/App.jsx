@@ -36,6 +36,13 @@ function App() {
                 value={symptoms}
                 onChange={(event) => setSymptoms(event.target.value)}
             />
+            <input
+                type="radio"
+                name="Pain Severity"
+                value="Mild"
+                value2="Moderate"
+                value3="Severe"
+            />
 
             <br />
 
