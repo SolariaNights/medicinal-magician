@@ -5,6 +5,7 @@ function App() {
     const [assessmentStarted, setAssessmentStarted] = useState(false)
     const [symptoms, setSymptoms] = useState('')
     const [patientName, setPatientName] = useState('')
+    const [severity, setSeverity] = useState('')
 
     return (
         <div>
@@ -36,13 +37,27 @@ function App() {
                 value={symptoms}
                 onChange={(event) => setSymptoms(event.target.value)}
             />
-            <input
+                <input 
+                 type="radio"
+                 name="Pain Severity"
+                 value="Mild"
+                 onChange={(event) => setSeverity(event.target.value)}
+                />
+                <label>Mild</label>
+                <input 
                 type="radio"
                 name="Pain Severity"
-                value="Mild"
-                value2="Moderate"
-                value3="Severe"
-            />
+                value="Moderate"
+                onChange={(event) => setSeverity(event.target.value)} 
+                />
+                <label>Moderate</label>
+                <input
+                type="radio"
+                name="Pain Severity"
+                value="Severe"
+                onChange={(event) => setSeverity(event.target.value)}
+                />
+                <label>Severe</label>
 
             <br />
 
