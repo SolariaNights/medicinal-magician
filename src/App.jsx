@@ -61,9 +61,14 @@ function App() {
 
             <br />
 
-            <button onClick={() => setAssessmentStarted(true)}>
-                Begin Assessment
-            </button>
+            <button onClick={() => {
+    if (patientName !== '' && symptoms !== '' && severity !== '') {
+        setAssessmentStarted(true)
+    }
+}}>
+    Begin Assessment
+</button>
+
 
             {assessmentStarted && (
             <div>
