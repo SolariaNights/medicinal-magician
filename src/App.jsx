@@ -68,6 +68,7 @@ function App() {
             {assessmentStarted && (
             <div>
             <h2>Assessment</h2>
+            <p>Patient name: {patientName}</p>
             <p>Symptoms entered: {symptoms}</p>
             <p>Severity: {severity}</p>
             <p>Thank you. Your information has been recorded.</p>
