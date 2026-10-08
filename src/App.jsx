@@ -92,6 +92,7 @@ function App() {
     setBirthday('')
     setSymptoms('')
     setSeverity('')
+    setError('')
     setAssessmentStarted(false)
 }}>
     Reset Assessment
