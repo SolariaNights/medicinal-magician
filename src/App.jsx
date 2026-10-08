@@ -63,11 +63,18 @@ function App() {
             <br />
 
             <button onClick={() => {
-    if (patientName !== '' && symptoms !== '' && severity !== '') {
-        setAssessmentStarted(true)
+    if (patientName === '') {
+        setError('Please put in the patient name.')
+    }
+    else if (symptoms === '') {
+        setError('Please type out the symptoms.')
+    }
+    else if (severity === '') {
+        setError('Please select a severity.')
     }
     else {
-        setError('Please fill out all the required information')
+        setAssessmentStarted(true)
+        setError('')
     }
 }}>
     Begin Assessment
