@@ -6,6 +6,7 @@ function App() {
     const [symptoms, setSymptoms] = useState('')
     const [patientName, setPatientName] = useState('')
     const [severity, setSeverity] = useState('')
+    const [error, setError] = useState('')
 
     return (
         <div>
@@ -65,10 +66,14 @@ function App() {
     if (patientName !== '' && symptoms !== '' && severity !== '') {
         setAssessmentStarted(true)
     }
+    else {
+        setError('Please fill out all the required information')
+    }
 }}>
     Begin Assessment
 </button>
 
+{error}
 
             {assessmentStarted && (
             <div>
