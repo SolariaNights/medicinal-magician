@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
     const [assessmentStarted, setAssessmentStarted] = useState(false)
+    const [birthday, setBirthday] = useState('')
     const [symptoms, setSymptoms] = useState('')
     const [patientName, setPatientName] = useState('')
     const [severity, setSeverity] = useState('')
@@ -20,7 +21,11 @@ function App() {
                 value={patientName}
                 onChange={(event) => setPatientName(event.target.value)}
                 />
-                <p>Date of Birth: 06/09/1969</p>
+                <input
+                placeholder="Enter Date of Birth"
+                value={birthday}
+                onChange={(event) => setBirthday(event.target.value)}
+                />
             </div>
 
             <h2>Medical History</h2>
@@ -66,6 +71,9 @@ function App() {
     if (patientName === '') {
         setError('Please put in the patient name.')
     }
+    else if (birthday === '') {
+        setError("Please enter the patient's date of birth")
+    }
     else if (symptoms === '') {
         setError('Please type out the symptoms.')
     }
@@ -79,6 +87,15 @@ function App() {
 }}>
     Begin Assessment
 </button>
+<button onClick={() => {
+    setPatientName('')
+    setBirthday('')
+    setSymptoms('')
+    setSeverity('')
+    setAssessmentStarted(false)
+}}>
+    Reset Assessment
+</button>
 
 {error}
 
@@ -86,6 +103,7 @@ function App() {
             <div>
             <h2>Assessment</h2>
             <p>Patient name: {patientName}</p>
+            <p>Date of Birth: {birthday}</p>
             <p>Symptoms entered: {symptoms}</p>
             <p>Severity: {severity}</p>
             <p>Thank you. Your information has been recorded.</p>
