@@ -1,0 +1,14 @@
+[
+    {
+    "id" : "test-001",
+    "conditions" : ["Diabetes", "High Blood Pressure"],
+    "allergies" : ["Nuts"],
+    "medications" : ["Aspirin"]
+    },
+    {
+    "id" : "test-002",
+    "conditions" : ["Asthma"],
+    "allergies" : ["Solar"],
+    "medications" : ["Tylenol"]  
+    } 
+]
