@@ -4,4 +4,4 @@ from MedicalMagician import get_patient
 # get_patient("patientId")
 result = get_patient("test-002")
 print(result)
-# if cant find a patient retur
+# if cant find a patient returns None

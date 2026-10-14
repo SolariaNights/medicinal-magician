@@ -4,7 +4,7 @@
 # Provide patient history to backend.
 #
 # FIRST VERSION
-# Use fictional patient records stored locally in Python.
+# Use fictional patient records stored locally in JSON file.
 # Accept a test patient ID and find the matching record.
 # Return the patient's conditions, medications, and allergies.
 # Report when the requested patient cannot be found.
@@ -15,6 +15,7 @@
 # OUTPUT
 # A Python dictionary containing the patient ID and their
 # conditions, medications, and allergies.
+# returns None when no patient matches
 #
 # OUTSIDE THIS VERSION'S SCOPE
 # Connecting to real hospital systems or using real patient records.
@@ -60,8 +61,13 @@ except FileNotFoundError:
 
 ##########################################
 # Function: get_patient
-# Purpose: Takes parameter requested_id and returns their whole
-# dictionary
+# Input: Patient id
+# Purpose: Takes input id and returns a dictionary with all patient
+#          information stored in JSON file
+#          (in this case just allergies, conditions, and medications)
+#           
+# Output: Patient Dictionary or None if no match
+
 
 def get_patient(requested_id):
     # clean text for input errors
@@ -83,16 +89,3 @@ if __name__ == "__main__":
         print("Patient conditions", result["conditions"])
         print("Patient allergies", result["allergies"])
         print("Patient medications", result["medications"])
-
-#######################################################    
-"""
-test
-print(patient)
-print(patient["allergies"])
-
-print(result)
-print(get_patient("test-001"))
-print(get_patient("test-002"))
-print(get_patient("test-003"))
-result = get_patient("test-002")
-"""
