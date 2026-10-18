@@ -1,0 +1,20 @@
+[
+    {
+    "id" : "test-001",
+    "name" : "Sam Rivera",
+    "age" : 58,
+    "gender" : "male",
+    "conditions" : ["Diabetes", "High Blood Pressure"],
+    "allergies" : ["Nuts"],
+    "medications" : ["Aspirin"]
+    },
+    {
+    "id" : "test-002",
+    "name" : "Priya Shah",
+    "age" : 24,
+    "gender" : "female",
+    "conditions" : ["Asthma"],
+    "allergies" : ["Solar"],
+    "medications" : ["Tylenol"]
+    }
+]
