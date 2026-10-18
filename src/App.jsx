@@ -16,11 +16,13 @@ function App() {
             <h2>Patient Information: </h2>
 
             <div>
+                <label>Patient Name</label>
                 <input
                 placeholder="Enter Patient Name"
                 value={patientName}
                 onChange={(event) => setPatientName(event.target.value)}
                 />
+                <label>Date of Birth</label>
                 <input
                 placeholder="Enter Date of Birth"
                 value={birthday}
