@@ -1,0 +1,147 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "resource": {
+    "resourceType": "Patient",
+    "id": "demo-001",
+    "name": [
+     {
+      "given": [
+       "Maria"
+      ],
+      "family": "Lopez"
+     }
+    ],
+    "birthDate": "1964-03-12",
+    "gender": "female"
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Condition",
+    "code": {
+     "text": "Type 2 diabetes mellitus"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Condition",
+    "code": {
+     "text": "Essential hypertension"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Condition",
+    "code": {
+     "text": "Hyperlipidemia"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Condition",
+    "code": {
+     "text": "Acute bronchitis"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "resolved"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "medicationCodeableConcept": {
+     "text": "Metformin 500 mg"
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "medicationCodeableConcept": {
+     "text": "Lisinopril 10 mg"
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "medicationCodeableConcept": {
+     "text": "Atorvastatin 20 mg"
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "AllergyIntolerance",
+    "code": {
+     "text": "Penicillin"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Encounter",
+    "period": {
+     "start": "2026-04-02"
+    },
+    "type": [
+     {
+      "text": "Annual wellness visit"
+     }
+    ]
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Encounter",
+    "period": {
+     "start": "2026-08-19"
+    },
+    "type": [
+     {
+      "text": "Follow-up: diabetes"
+     }
+    ]
+   }
+  }
+ ]
+}

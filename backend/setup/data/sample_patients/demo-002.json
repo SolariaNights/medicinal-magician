@@ -1,0 +1,94 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "resource": {
+    "resourceType": "Patient",
+    "id": "demo-002",
+    "name": [
+     {
+      "given": [
+       "James"
+      ],
+      "family": "Carter"
+     }
+    ],
+    "birthDate": "1998-07-30",
+    "gender": "male"
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Condition",
+    "code": {
+     "text": "Asthma"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Condition",
+    "code": {
+     "text": "Seasonal allergic rhinitis"
+    },
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "medicationCodeableConcept": {
+     "text": "Albuterol inhaler"
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "medicationCodeableConcept": {
+     "text": "Fluticasone nasal spray"
+    }
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Encounter",
+    "period": {
+     "start": "2025-11-10"
+    },
+    "type": [
+     {
+      "text": "Urgent care: wheezing"
+     }
+    ]
+   }
+  },
+  {
+   "resource": {
+    "resourceType": "Encounter",
+    "period": {
+     "start": "2026-05-03"
+    },
+    "type": [
+     {
+      "text": "Primary care visit"
+     }
+    ]
+   }
+  }
+ ]
+}
