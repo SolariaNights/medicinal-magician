@@ -24,7 +24,7 @@ function App() {
                 />
                 <label>Date of Birth</label>
                 <input
-                placeholder="Enter Date of Birth"
+                type="date"
                 value={birthday}
                 onChange={(event) => setBirthday(event.target.value)}
                 />
@@ -33,9 +33,9 @@ function App() {
             <h2>Medical History</h2>
 
             <div>
-                <p>Previous Conditions: None listed</p>
-                <p>Current Medications: None listed</p>
-                <p>Allergies: None listed</p>
+                <p>Previous Conditions: Not provided</p>
+                <p>Current Medications: Not provided</p>
+                <p>Allergies: Not provided</p>
             </div>
 
             <h2>Current Symptoms</h2>
@@ -103,15 +103,37 @@ function App() {
 {error}
 
             {assessmentStarted && (
-            <div>
-            <h2>Assessment</h2>
-            <p>Patient name: {patientName}</p>
-            <p>Date of Birth: {birthday}</p>
-            <p>Symptoms entered: {symptoms}</p>
-            <p>Severity: {severity}</p>
-            <p>Thank you. Your information has been recorded.</p>
-        </div>)
-}
+                <section className="assessment-card" aria-labelledby="assessment-heading">
+                    <h2 id="assessment-heading">Assessment summary</h2>
+                    <p className="assessment-status">
+                        Your responses are ready for provider review.
+                    </p>
+                    <dl className="assessment-details">
+                        <div>
+                            <dt>Patient name</dt>
+                            <dd>{patientName}</dd>
+                        </div>
+                        <div>
+                            <dt>Date of birth</dt>
+                            <dd>{birthday}</dd>
+                        </div>
+                        <div>
+                            <dt>Symptoms</dt>
+                            <dd>{symptoms}</dd>
+                        </div>
+                        <div>
+                            <dt>Severity</dt>
+                            <dd>{severity}</dd>
+                        </div>
+                    </dl>
+                    <button
+                        className="assessment-edit-button"
+                        onClick={() => setAssessmentStarted(false)}
+                    >
+                        Review or edit responses
+                    </button>
+                </section>
+            )}
     </div>
     )
 }
