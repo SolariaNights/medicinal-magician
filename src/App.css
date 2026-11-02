@@ -519,6 +519,450 @@
   outline-offset: 3px;
 }
 
+/* Clinical workspace visual system */
+.screen-switcher {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 3px 12px rgba(24, 57, 74, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+.screen-switcher button {
+  min-height: 40px;
+  padding: 8px 16px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.screen-switcher button:hover {
+  color: var(--accent);
+}
+
+.screen-switcher button.active {
+  color: #ffffff;
+  background: var(--text-h);
+  border-color: var(--text-h);
+  box-shadow: none;
+}
+
+.app-shell {
+  width: min(100% - 40px, 980px);
+  padding: 40px 0 64px;
+}
+
+.app-header {
+  margin-bottom: 28px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  letter-spacing: -0.045em;
+}
+
+.app-header > p:last-child,
+.app-header-row > div:first-child > p:not(.eyebrow) {
+  max-width: 62ch;
+  color: var(--text);
+}
+
+.eyebrow {
+  margin-bottom: 9px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.user-controls {
+  gap: 14px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.user-controls span {
+  font-weight: 600;
+}
+
+.panel,
+.assessment-card {
+  padding: clamp(20px, 4vw, 30px);
+  margin: 18px 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+}
+
+.app-shell label,
+.patient-assessment label {
+  margin: 16px 0 7px;
+  color: var(--text-h);
+  font-size: 0.9rem;
+  font-weight: 620;
+}
+
+.app-shell input,
+.app-shell select,
+.app-shell textarea,
+.patient-assessment input:not([type='radio']),
+.patient-assessment textarea {
+  min-height: 46px;
+  padding: 11px 13px;
+  color: var(--text-h);
+  font-size: 0.95rem;
+  background: #fbfdfe;
+  border: 1px solid #cbd9e0;
+  border-radius: 8px;
+  transition: border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.app-shell textarea,
+.patient-assessment textarea {
+  min-height: 120px;
+}
+
+.app-shell input::placeholder,
+.app-shell textarea::placeholder,
+.patient-assessment input::placeholder,
+.patient-assessment textarea::placeholder {
+  color: #82929c;
+}
+
+.app-shell input:focus,
+.app-shell select:focus,
+.app-shell textarea:focus,
+.patient-assessment input:focus,
+.patient-assessment textarea:focus {
+  background: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.13);
+}
+
+.app-shell input:focus-visible,
+.app-shell select:focus-visible,
+.app-shell textarea:focus-visible,
+.app-shell button:focus-visible,
+.patient-assessment button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.app-shell button,
+.patient-assessment > button,
+.assessment-edit-button {
+  min-height: 44px;
+  padding: 10px 17px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  border-radius: 8px;
+  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+.app-shell button:active,
+.patient-assessment > button:active,
+.assessment-edit-button:active {
+  transform: translateY(1px);
+}
+
+.primary-button,
+.patient-assessment > button:first-of-type {
+  color: #ffffff;
+  background: #087f8c;
+  border: 1px solid #087f8c;
+}
+
+.primary-button:hover:not(:disabled),
+.patient-assessment > button:first-of-type:hover {
+  background: #066b76;
+  border-color: #066b76;
+}
+
+.secondary-button,
+.patient-assessment > button:nth-of-type(2),
+.assessment-edit-button {
+  color: var(--text-h);
+  background: #ffffff;
+  border: 1px solid #cbd9e0;
+}
+
+.secondary-button:hover:not(:disabled),
+.patient-assessment > button:nth-of-type(2):hover,
+.assessment-edit-button:hover {
+  background: #f1f7f8;
+  border-color: #9ab5bd;
+}
+
+.demo-hint,
+.safety-note,
+.form-footer,
+.guideline-refs {
+  font-size: 0.84rem;
+}
+
+.demo-hint {
+  margin-top: 16px;
+}
+
+.safety-note,
+.disclaimer,
+.assessment-status {
+  padding: 13px 16px;
+  color: #315364;
+  background: #edf6f7;
+  border: 1px solid #cfe5e7;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.patient-summary {
+  padding: 20px;
+  background: #f7fafb;
+  border-color: #e1eaee;
+  border-radius: 10px;
+}
+
+.patient-summary h3,
+.consideration-heading h3,
+.red-flags h3,
+.follow-up h3 {
+  color: var(--text-h);
+}
+
+.history-grid {
+  gap: 18px 22px;
+}
+
+.history-grid dt,
+.assessment-details dt {
+  color: #637784;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.history-grid dd {
+  line-height: 1.5;
+}
+
+.form-footer {
+  margin-top: 16px;
+}
+
+.form-footer > span {
+  color: var(--text);
+}
+
+.error-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+.patient-assessment {
+  width: min(100% - 40px, 780px);
+  padding: clamp(24px, 5vw, 44px);
+  margin: 36px auto 60px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.patient-assessment h1 {
+  margin: 0 0 34px;
+  text-align: left;
+}
+
+.patient-assessment h2 {
+  padding-top: 22px;
+  margin: 26px 0 12px;
+  border-top: 1px solid #e8eef1;
+}
+
+.patient-assessment h1 + h2 {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.patient-assessment > div p {
+  padding: 8px 0;
+  color: var(--text);
+  border-bottom: 1px solid #edf1f3;
+}
+
+.patient-assessment > div p:last-child {
+  border-bottom: 0;
+}
+
+.patient-assessment fieldset {
+  gap: 10px 14px;
+  padding: 12px 16px 16px;
+  background: #fbfdfe;
+  border-color: #d7e2e7;
+  border-radius: 9px;
+}
+
+.patient-assessment fieldset legend {
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.patient-assessment fieldset input[type='radio'] {
+  width: 16px;
+  height: 16px;
+  margin: 0 0 0 4px;
+  accent-color: var(--accent);
+}
+
+.patient-assessment fieldset label {
+  margin: 0 8px 0 0;
+  cursor: pointer;
+}
+
+.field-error {
+  font-size: 0.84rem;
+}
+
+.assessment-card {
+  margin-top: 30px;
+}
+
+.assessment-card h2 {
+  padding: 0;
+  margin: 0 0 16px;
+  border: 0;
+}
+
+.assessment-status {
+  margin-bottom: 20px;
+}
+
+.assessment-details {
+  gap: 12px;
+}
+
+.assessment-details > div {
+  padding: 15px;
+  background: #f7fafb;
+  border-color: #e1eaee;
+  border-radius: 9px;
+}
+
+.assessment-edit-button {
+  cursor: pointer;
+}
+
+.red-flags {
+  padding: 18px;
+}
+
+.consideration-card {
+  padding: 20px;
+  background: #fbfdfe;
+  border-color: #dce6eb;
+}
+
+.likelihood {
+  padding: 4px 10px;
+  color: #526574;
+  background: #edf3f5;
+  border-color: #dce6eb;
+  font-weight: 650;
+}
+
+.likelihood-high {
+  color: #a51f2b;
+  background: #fff0f0;
+  border-color: #f0c6c9;
+}
+
+.feedback-controls button {
+  min-height: 38px;
+}
+
+@media (max-width: 640px) {
+  .screen-switcher {
+    justify-content: stretch;
+    padding: 10px 12px;
+  }
+
+  .screen-switcher button {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
+  .app-shell {
+    width: min(100% - 28px, 980px);
+    padding: 28px 0 44px;
+  }
+
+  .app-header-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .user-controls {
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .patient-assessment {
+    width: min(100% - 28px, 780px);
+    padding: 24px 20px;
+    margin: 22px auto 40px;
+    border-radius: 12px;
+  }
+
+  .patient-assessment h1 {
+    margin-bottom: 28px;
+  }
+
+  .form-footer {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-footer button {
+    width: 100%;
+  }
+
+  .assessment-details {
+    grid-template-columns: 1fr;
+  }
+
+  .consideration-heading {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @media (max-width: 620px) {
   .app-shell {
     width: min(100% - 28px, 960px);
